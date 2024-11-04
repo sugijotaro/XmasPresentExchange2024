@@ -25,6 +25,7 @@
       content="https://www.starbucks.co.jp/rewards/ribbon_stargift/common/images/OGP.jpg"
     />
     <link rel="stylesheet" type="text/css" media="all" href="files/style.css" />
+    <script type="module" src="script.js" charset="UTF-8"></script>
   </head>
   <body class="vsc-initialized">
     <div class="mainContents notExNav">
@@ -327,20 +328,32 @@
                   <div class="p-howto__step02">
                     <p class="p-howto__text">
                       パートナーIDを入力して、<br />
-                      今年も渡す相手はランダム！<br />
+                      今年も渡す相手は秘密！<br />
                       プレゼントを誰が誰に渡すかは、すでに決定済みです！<br />
                       パートナーIDを入れて、自分がプレゼントを渡す相手を確認してください！<br />
                       相手が誰かは、渡すまでは自分だけの秘密にしてくださいね🤫
                     </p>
                     <p>あなたのPTR IDを入力: <input type="text" id="ptrID" /></p>
                     <div class="p-howto__step02-btn">
-                      <a href="javascript:void(0);" class="p-howto__btn" onclick="findRecipient()">
+                      <a href="javascript:void(0);" class="p-howto__btn" onclick="showNameFromID()">
                         <span class="p-howto__btn-body">渡す相手をチェック！</span>
                       </a>
                     </div>
-                    <div class="p-howto__step02-note">
-                      <p class="p-howto__note" id="recipientMessage">
-                        あなたがプレゼントを渡す相手は...さんです！
+                    <div class="p-howto__step02-note" style="text-align: center; margin-top: 20px;">
+                      <p style="font-size: 1.2em; color: #333;">あなたがプレゼントを渡す相手は...</p>
+                      <p class="p-howto__note" id="ptrName" 
+                         style="
+                           font-size: 2em;
+                           font-weight: bold;
+                           color: #E34D61;
+                           background-color: #FFF5F5;
+                           padding: 15px;
+                           border-radius: 8px;
+                           border: 2px solid #E34D61;
+                           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                           display: inline-block;
+                         ">
+                        〇〇さんです！
                       </p>
                     </div>
                   </div>
